@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebuilding Britain: National Infrastructure Transformation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero .tagline {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: -40px auto 0;
+            padding: 0 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1e3c72;
+            display: block;
+        }
+
+        .stat-card .label {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1e3c72;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #2a5298;
+            font-size: 1.5em;
+            margin: 30px 0 15px;
+        }
+
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .route-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .route-card h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .journey-time {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .benefit-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+
+        .benefit-card h4 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            background: #f8f9fa;
+            margin: 20px 0;
+            border-left: 4px solid #2a5298;
+            border-radius: 5px;
+        }
+
+        .timeline-item h4 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .cost-breakdown {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cost-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #1e3c72;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Rebuilding Britain</h1>
+        <p class="tagline">National Infrastructure Transformation Programme</p>
+        <p>A comprehensive policy proposal for economic renaissance through revolutionary transport and energy infrastructure</p>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-card">
+            <span class="number">£750B</span>
+            <span class="label">Total Investment</span>
+        </div>
+        <div class="stat-card">
+            <span class="number">1,000</span>
+            <span class="label">Miles of Maglev Network</span>
+        </div>
+        <div class="stat-card">
+            <span class="number">8-10</span>
+            <span class="label">Years to Completion</span>
+        </div>
+        <div class="stat-card">
+            <span class="number">10 GW</span>
+            <span class="label">New Nuclear Capacity</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Strategic Vision</h2>
+            <p>The Rebuilding Britain programme represents the most ambitious infrastructure investment in British history since the Industrial Revolution. This coordinated national project will simultaneously deliver a revolutionary magnetic levitation (maglev) transport network and five new nuclear power stations, fundamentally transforming Britain's economic geography and energy security within a single decade.</p>
+            
+            <div class="benefits-grid" style="margin-top: 30px;">
+                <div class="benefit-card">
+                    <h4>🚄 Revolutionary Transport</h4>
+                    <p>500 km/h maglev trains connecting all major British cities with journey times under 2 hours</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>⚡ Energy Security</h4>
+                    <p>Five new nuclear power stations providing abundant, cheap, clean baseload power</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>🏘️ Regional Rebalancing</h4>
+                    <p>£200-300 billion property value uplift as connectivity transforms regional economies</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>💼 Job Creation</h4>
+                    <p>100,000+ construction jobs and 300,000+ indirect employment opportunities</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>National Maglev Network</h2>
+            <h3>Core Routes</h3>
+            <div class="route-grid">
+                <div class="route-card">
+                    <h4>Great Western Spine</h4>
+                    <p>London → Reading → Bristol → Cardiff</p>
+                    <div class="journey-time">Distance: 200km</div>
+                    <div class="journey-time">London-Cardiff: 24 minutes</div>
+                </div>
+                <div class="route-card">
+                    <h4>Midlands Hub</h4>
+                    <p>London → Birmingham → Manchester → Liverpool</p>
+                    <div class="journey-time">Distance: 320km</div>
+                    <div class="journey-time">London-Manchester: 34 minutes</div>
+                </div>
+                <div class="route-card">
+                    <h4>Eastern Spine</h4>
+                    <p>London → Cambridge → Sheffield → Leeds → Newcastle</p>
+                    <div class="journey-time">Distance: 450km</div>
+                    <div class="journey-time">London-Newcastle: 54 minutes</div>
+                </div>
+                <div class="route-card">
+                    <h4>Scottish Network</h4>
+                    <p>Newcastle → Edinburgh → Glasgow → Inverness</p>
+                    <div class="journey-time">Distance: 420km</div>
+                    <div class="journey-time">London-Edinburgh: 90 minutes</div>
+                </div>
+                <div class="route-card">
+                    <h4>Belfast Connection</h4>
+                    <p>Glasgow → Belfast (undersea crossing)</p>
+                    <div class="journey-time">Distance: 150km</div>
+                    <div class="journey-time">First high-speed link to NI</div>
+                </div>
+                <div class="route-card">
+                    <h4>Cross-Country Connectors</h4>
+                    <p>Manchester-Sheffield-Leeds & Bristol-Birmingham</p>
+                    <div class="journey-time">Distance: 270km</div>
+                    <div class="journey-time">Complete network integration</div>
+                </div>
+            </div>
+
+            <h3>Technical Specifications</h3>
+            <ul style="margin-top: 15px; line-height: 2;">
+                <li><strong>Technology:</strong> Japanese SCMaglev (electrodynamic suspension)</li>
+                <li><strong>Maximum Speed:</strong> 500 km/h (310 mph)</li>
+                <li><strong>Major Stations:</strong> 25 principal terminals in city centers</li>
+                <li><strong>Rolling Stock:</strong> 120 trains (8-car configuration)</li>
+                <li><strong>Power Integration:</strong> Dedicated supply from nuclear programme</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Economic Impact</h2>
+            
+            <h3>Property Value Transformation</h3>
+            <p>The maglev network will create new commuter zones with dramatic impacts on house prices and regional economies:</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>Birmingham</h4>
+                    <p>30-minute London commute</p>
+                    <p><strong>+£50-80k</strong> average house price</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Manchester</h4>
+                    <p>34-minute London commute</p>
+                    <p><strong>+£40-70k</strong> average house price</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Cardiff</h4>
+                    <p>24-minute London commute</p>
+                    <p><strong>+£60-90k</strong> average house price</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Leeds/Sheffield</h4>
+                    <p>75-minute London commute</p>
+                    <p><strong>+£30-50k</strong> average house price</p>
+                </div>
+            </div>
+
+            <h3>Annual Economic Benefits (Mature Operation)</h3>
+            <div class="cost-breakdown">
+                <div class="cost-item">
+                    <span>Transport Revenue</span>
+                    <span>£8-12 billion</span>
+                </div>
+                <div class="cost-item">
+                    <span>Energy Cost Savings</span>
+                    <span>£8-12 billion</span>
+                </div>
+                <div class="cost-item">
+                    <span>Productivity Gains</span>
+                    <span>£15-25 billion</span>
+                </div>
+                <div class="cost-item">
+                    <span>Tourism Revenue</span>
+                    <span>£3-5 billion</span>
+                </div>
+                <div class="cost-item">
+                    <span>Total Annual Benefit</span>
+                    <span>£34-54 billion</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Implementation Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>2026-2027: Foundation Phase</h4>
+                    <p>Land acquisition, environmental clearance, site preparation across all locations. Establishment of construction supply chains and workforce training programmes.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2027-2030: Major Construction Phase</h4>
+                    <p>Simultaneous construction at 15-20 sites. Tunneling, guideway installation, nuclear plant construction, and station building across the network.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2030-2033: Systems Integration</h4>
+                    <p>Track installation, power systems connection, rolling stock delivery, and comprehensive testing of all network segments.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2033-2035: Network Completion</h4>
+                    <p>Final integration, safety certification, phased opening of routes, and transition to full operational status.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Programme Costs</h2>
+            <div class="cost-breakdown">
+                <div class="cost-item">
+                    <span>Maglev Network (1,000 miles)</span>
+                    <span>£500-550 billion</span>
+                </div>
+                <div class="cost-item">
+                    <span>Nuclear Power Programme (5 stations)</span>
+                    <span>£150-200 billion</span>
+                </div>
+                <div class="cost-item">
+                    <span>Total Programme Investment</span>
+                    <span>£650-750 billion</span>
+                </div>
+            </div>
+
+            <h3>Financing Strategy</h3>
+            <ul style="margin-top: 15px; line-height: 2;">
+                <li><strong>Sovereign Green Bonds:</strong> £400-500 billion backed by future revenues</li>
+                <li><strong>International Investment:</strong> £100-150 billion from infrastructure funds</li>
+                <li><strong>Property Value Capture:</strong> £50-100 billion through betterment taxes</li>
+                <li><strong>Carbon Offset Revenues:</strong> £20-30 billion from replacing aviation</li>
+            </ul>
+
+            <h3>Return on Investment</h3>
+            <p style="margin-top: 15px;">Break-even within 15-20 years of operation. 30-year net present value of £400-600 billion. Debt service ratio of 15-20% of revenues ensures long-term sustainability.</p>
+        </div>
+
+        <div class="section">
+            <h2>Environmental Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>Carbon Reduction</h4>
+                    <p>35-45 million tonnes CO2 saved annually through aviation replacement and clean nuclear power</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Zero Emissions Transport</h4>
+                    <p>Maglev trains produce no direct emissions, powered entirely by clean nuclear energy</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Land Efficiency</h4>
+                    <p>Elevated guideways minimize land use and environmental disruption compared to conventional rail</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Aviation Replacement</h4>
+                    <p>40-50% reduction in domestic flights as maglev becomes preferred travel mode</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Building the Future</h2>
+            <p>Great nations are built by great infrastructure. The Rebuilding Britain programme will create the foundations for a century of British prosperity.</p>
+            <p style="font-size: 1.1em; font-style: italic; margin-top: 30px;">This is not merely an infrastructure programme—it is a national transformation that will define Britain's competitiveness and prosperity for the next century.</p>
+        </div>
+
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>The Rebuilding Britain programme represents a once-in-a-generation opportunity to transform the nation's economic foundations. By simultaneously delivering revolutionary transport connectivity and abundant clean energy, we can create a more balanced, prosperous, and sustainable economy.</p>
+            
+            <p style="margin-top: 20px;">The scale of investment is unprecedented, but so are the returns. Within a decade, Britain would possess the world's most advanced transport network outside Asia, abundant clean energy, and a fundamentally restructured economy offering opportunity and prosperity across all regions.</p>
+            
+            <p style="margin-top: 20px; font-weight: bold; font-size: 1.1em; color: #1e3c72;">The choice is clear: embrace this transformational vision or accept continued decline. Britain has the engineering expertise, financial capacity, and national need to deliver this programme. What we require now is the political will to build the future our nation deserves.</p>
+        </div>
+    </div>
+</body>
+</html>
